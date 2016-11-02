@@ -14,13 +14,13 @@ Simple:
     atomizers:
         - TOKEN: seq 1 10
 
-
+# ./clusterrunner.yaml
 PHPUnit:
     commands:
-        - phpunit --log-junit $ARTIFACT_DIR/result.xml $TESTPATH
+        - phpunit $TESTPATH
 
     atomizers:
-        - TESTPATH: find "test/php" -name "*Test.php"
+        - TESTPATH: find "test/" -name "*Test.php"
 
 
 Nose:
